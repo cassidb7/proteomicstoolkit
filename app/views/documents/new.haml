@@ -1,0 +1,20 @@
+%h1 Upload Document
+
+= form_for(@document) do |f|
+  .form-group
+    %label{:for => "name"} Name
+    = f.text_field :name, class: 'form-control'
+  .form-group
+    %label{:for => "name"} Excel Upload
+    = f.file_field :excel
+  = form_tag({}) do
+    .form-group
+      %label{:for => "document_name"} Volume 1
+      = number_field_tag :volume_1, nil, class: 'form-control', step: 0.000001
+    .form-group
+      %label{:for => "document_name"} Volume 2
+      = number_field_tag :volume_2, nil, class: 'form-control', step: 0.000001
+    .form-group
+      %label{:for => "document_name"} Volume 3
+      = number_field_tag :volume_3, nil, class: 'form-control', step: 0.00001
+    = f.submit "Submit", class: "btn btn-primary"

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sequence: MyString
+  protein: MyString
+  gene: MyString
+  intensity_1: 9.99
+
+two:
+  sequence: MyString
+  protein: MyString
+  gene: MyString
+  intensity_1: 9.99

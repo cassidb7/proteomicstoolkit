@@ -1,0 +1,15 @@
+.row
+  .col-md-4
+    %h2 Documents
+  .col-md-8
+    = link_to "Upload Document", new_document_path, class: "btn btn-primary float-right"
+.row
+  %table#admin_table.table
+    %thead
+      %tr
+        %th Name
+        %th Status
+        %th Complete
+    %tbody
+      - @documents.each do |document|
+        = render partial: 'document', locals: {document: document}
